@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router'; 
 import { DepartmentListComponent } from './department-list/department-list.component';
 import { EmployessListComponent } from './employess-list/employess-list.component';
+import { EmployeeService } from './employee.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { EmployessListComponent } from './employess-list/employess-list.componen
       { path: 'employees:id', component: EmployessListComponent },
     ]) 
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
